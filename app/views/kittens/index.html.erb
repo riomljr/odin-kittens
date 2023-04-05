@@ -1,11 +1,22 @@
 <h1>Welcome To Kittens API</h1>
 <p>Here are all your kittens </p>
 
-<% @kittens.each do |kitten| %>
-<div>
-  <%= kitten.name %>
-  <%= kitten.id %>
-</div>
-<br>
-<% end %>
+<table class="table table-striped">
+   <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <% @kittens.each do |kitten| %>
+    <tr>
+      <td > <%=kitten.name%> </td>
+      <td ><%= kitten.age %> </td>
+      <td ><%= link_to "Show Kitten Profile", kitten %></td>
+    <% end %>
+  </tbody>
+  
+</table>
 <%= link_to "Add new Kitten", new_kitten_path %>

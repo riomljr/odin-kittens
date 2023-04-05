@@ -1,2 +1,22 @@
-<h1>Kittens#show</h1>
-<p>Find me in app/views/kittens/show.html.erb</p>
+<h1>Kitten: <%=@kitten.name%></h1>
+
+<table class="table table-striped">
+   <thead>
+    <tr>
+      <th scope="col">Age</th>
+      <th scope="col">Cuteness</th>
+      <th scope="col">Softness</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td ><%= @kitten.age %> </td>
+      <td ><%= @kitten.cuteness%> </td>
+      <td ><%= @kitten.softness %> </td>
+      <td ><%= link_to "Edit Kitten", edit_kitten_path%>
+
+  </tbody>
+  
+</table>

@@ -1,2 +1,10 @@
 <h1>Kittens#edit</h1>
-<p>Find me in app/views/kittens/edit.html.erb</p>
+<%= render "kittens/form", kitten: @kitten %>
+
+ 
+        <%= form.submit "Create", class: "btn btn-primary btn-lg" %>
+   
+    <br>
+    
+        <%= link_to "Cancel", kittens_path, class: "btn btn-secondary" %>
+  
