@@ -20,7 +20,7 @@ class KittensController < ApplicationController
       flash.notice = "Congrats! You just saved a new Kitten!"
     else
       flash.notice = "Oh no! Kitten was not saved, try again"
-      redirect_to new_kitten
+      redirect_to new_kitten_path
     end
   end
 

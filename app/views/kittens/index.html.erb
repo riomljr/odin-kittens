@@ -1,2 +1,11 @@
 <h1>Welcome To Kittens API</h1>
 <p>Here are all your kittens </p>
+
+<% @kittens.each do |kitten| %>
+<div>
+  <%= kitten.name %>
+  <%= kitten.id %>
+</div>
+<br>
+<% end %>
+<%= link_to "Add new Kitten", new_kitten_path %>
