@@ -1,5 +1,5 @@
 <h1>Welcome To Kittens API</h1>
-<p>Here are all your kittens </p>
+<p>Here are all your kittens: </p>
 
 <table class="table table-striped">
    <thead>
@@ -12,11 +12,10 @@
   <tbody>
     <% @kittens.each do |kitten| %>
     <tr>
-      <td > <%=kitten.name%> </td>
-      <td ><%= kitten.age %> </td>
-      <td ><%= link_to "Show Kitten Profile", kitten %></td>
+      <td style="width:12%"> <%=kitten.name%> </td>
+      <td style="width:12%"><%= kitten.age %> </td>
+      <td ><%= button_to "Show Kitten Profile", kitten, class: "btn btn-success" %></td>
     <% end %>
   </tbody>
   
 </table>
-<%= link_to "Add new Kitten", new_kitten_path %>

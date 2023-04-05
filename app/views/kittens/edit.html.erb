@@ -1,10 +1,4 @@
-<h1>Kittens#edit</h1>
-<%= render "kittens/form", kitten: @kitten %>
-
- 
-        <%= form.submit "Create", class: "btn btn-primary btn-lg" %>
-   
-    <br>
-    
-        <%= link_to "Cancel", kittens_path, class: "btn btn-secondary" %>
+<h1>Edit <%=@kitten.name%>'s profile</h1>
+  
+  <%= render "kittens/form", kitten: @kitten %>
   

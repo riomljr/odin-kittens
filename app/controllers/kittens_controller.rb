@@ -19,7 +19,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.create(kitten_params)
     if @kitten.save
       flash.notice = "Congrats! You just saved a new Kitten!"
-      redirect_to new_kitten_path
+      redirect_to root_path
     else
       flash.notice = "Oh no! Kitten was not saved, try again"
       redirect_to new_kitten_path
@@ -27,6 +27,17 @@ class KittensController < ApplicationController
   end
 
   def update
+    @kitten = Kitten.find(params[:id])
+    if @kitten.update(kitten_params)
+      redirect_to @kitten
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+   
+
   end
 
   private
