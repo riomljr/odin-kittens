@@ -1,4 +1,4 @@
-<h1>Kitten: <%=@kitten.name%></h1>
+<h1><%=@kitten.name%></h1>
 
 <table class="table table-striped">
    <thead>
@@ -15,8 +15,12 @@
       <td ><%= @kitten.age %> </td>
       <td ><%= @kitten.cuteness%> </td>
       <td ><%= @kitten.softness %> </td>
-      <td ><%= link_to "Edit Kitten", edit_kitten_path%>
+      <td ><%= link_to "Edit", edit_kitten_path, class: "btn btn-info"%>
+     
 
   </tbody>
+
   
 </table>
+
+<%= button_to "Destroy", @kitten, method: :delete, class: "btn btn-danger"  %>

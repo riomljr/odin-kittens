@@ -1,11 +1,14 @@
-<h1>Welcome To Kittens API</h1>
-<p>Here are all your kittens: </p>
-
+<h1>Kittens API</h1>
+<div>
+  <p>Here are all your kittens: </p>
+</div>
 <table class="table table-striped">
    <thead>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Age</th>
+      <th scope="col">Cuteness</th>
+      <th scope="col">Softness</th>
       
     </tr>
   </thead>
@@ -14,7 +17,9 @@
     <tr>
       <td style="width:12%"> <%=kitten.name%> </td>
       <td style="width:12%"><%= kitten.age %> </td>
-      <td ><%= button_to "Show Kitten Profile", kitten, class: "btn btn-success" %></td>
+      <td style="width:12%"><%= kitten.cuteness %> </td>
+      <td style="width:12%"><%= kitten.softness %> </td>
+      <td style="width:12%"><%= link_to "Profile", kitten, class: "btn btn-success" %></td>
     <% end %>
   </tbody>
   

@@ -1,6 +1,9 @@
 class KittensController < ApplicationController
   def index
     @kittens = Kitten.all
+    respond_to do |format|
+      format.json {render :json => @kittens }
+    end
   end
 
   def show
@@ -36,9 +39,12 @@ class KittensController < ApplicationController
   end
 
   def destroy
-   
+    @kitten = Kitten.find(params[:id])
+    @kitten.destroy
+    redirect_to root_path
 
   end
+
 
   private
 
